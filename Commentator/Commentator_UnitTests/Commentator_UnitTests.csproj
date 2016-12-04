@@ -83,6 +83,7 @@
   <ItemGroup>
     <Fakes Include="Fakes\Microsoft.VisualStudio.Text.Data.fakes" />
     <Fakes Include="Fakes\Microsoft.VisualStudio.Text.Logic.fakes" />
+    <None Include="app.config" />
     <None Include="Key.snk" />
   </ItemGroup>
   <ItemGroup>

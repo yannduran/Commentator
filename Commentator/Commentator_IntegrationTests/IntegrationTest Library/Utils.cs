@@ -16,6 +16,7 @@ using IOleServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Microsoft.VisualStudio;
+using OleInterop = Microsoft.VisualStudio.OLE.Interop;
 
 namespace Microsoft.VsSDK.IntegrationTestLibrary
 {
@@ -367,7 +368,7 @@ namespace Microsoft.VsSDK.IntegrationTestLibrary
             Assert.IsNotNull(uiShellService);
             IVsWindowFrame windowFrame;
             int hr = uiShellService.FindToolWindow((uint)__VSFINDTOOLWIN.FTW_fFindFirst, ref persistenceGuid, out windowFrame);
-            Assert.IsTrue(hr == VSConstants.S_OK);
+            Assert.IsTrue(hr == Constants.S_OK);
 
             return (windowFrame != null);
         }
